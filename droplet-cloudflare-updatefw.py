@@ -133,5 +133,5 @@ if digo_firewall:
 digo_firewall = create_firewall(firewall_rules, droplet_ids)
 print("Created new firewall: " + digo_firewall.id)
 
-# save latest netblocks for comparison
+# save latest netblocks for comparison on next run
 save_netblocks(cf_netblocks)
