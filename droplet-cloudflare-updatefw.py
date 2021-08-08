@@ -66,7 +66,7 @@ def get_droplet_ids(manager):
 
 
 def get_firewall(manager):
-    """ retrieve a list of firewalls and return id with name matching FW_NAME constant """
+    """ retrieve a list of firewalls and return firewall object with a name matching FW_NAME constant """
 
     firewalls = manager.get_all_firewalls()
     for firewall in firewalls:
