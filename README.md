@@ -45,7 +45,7 @@ Take it for a spin:
 ~/scripts/droplet-cloudflare-updatefw.py
 ```
 
-You should notice a new firewall set up on DigitalOcean called "cloudflare" that is associated with your droplets
+You should notice a new firewall set up on the DigitalOcean web management console under the Networking -> Firewalls ipage, called "cloudflare", that is associated with your droplet(s)
 
 ## Automating
 You could make a cronjob to run this at a regular interval.
@@ -68,4 +68,5 @@ Add this to the file, staying mindful of what your actual path to the script is 
 * The python3-pip package
 
 ### The Future
-This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps this will evolve into a multicloud tool for this at some point.
+* The ability to get droplets only with a specific tag
+* This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps this will evolve into a multicloud tool for this at some point.
