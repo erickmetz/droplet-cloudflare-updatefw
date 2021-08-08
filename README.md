@@ -25,15 +25,27 @@ pip install -r requirements.txt
 Make the script executable, make a home for the script, and copy it over:
 ```
 chmod +x droplet-cloudflare-updatefw.py
-mkdir /home/user/scripts
-cp droplet-cloudflare-updatefw.py /home/user/scripts
+mkdir ~/scripts
+cp droplet-cloudflare-updatefw.py ~/scripts
 ```
 
-Replace this string in the code with your DigitalOcean API token, using your favorite text editor:
+Edit the code with your favorite editor similar to this:
+```
+vim ~/scripts/droplet-cloudflare-updatefw.py
+```
+
+And replace this constant's string value with your DigitalOcean API token
 ```
 DIGO_TOKEN = '___your digitalocean token goes here___'
 
 ```
+
+Take it for a spin:
+```
+~/scripts/droplet-cloudflare-updatefw.py
+```
+
+You should notice a new firewall set up on DigitalOcean called "cloudflare" that is associated with your droplets
 
 # Automating
 You could make a cronjob to run this at a regular interval.
@@ -44,9 +56,9 @@ crontab -e
 
 ```
 
-Add this to the file (this example checks for netblock changes daily at 1-2am pacific time, or 9am UTC:
+Add this to the file, staying mindful of what your actual path to the scripts is and changing the entry, accordingly. This example checks for netblock changes daily at 1-2am pacific time, or 9am UTC:
 ```
-0 9 * * * /path/to/cloudflare-update-ip-ranges.sh > /dev/null 2>&1
+0 9 * * * /home/user/scripts/droplet-cloudflare-updatefw.py > /dev/null 2>&1
 
 ```
 
