@@ -66,7 +66,7 @@ Add this to the file, staying mindful of what your actual path to the script is 
 * The python3-pip package
 
 ### Note
-This is now set up to only find droplets that have are tagged as the string constance DIGO_TAG, which defaults to 'webservers'. In order to include your droplet in this processing, you must enter your droplet in the web console and hit Tags -> Manage Tags and add a string that is consistent with the DIGO_TAG constant for your droplet to be associated with the firewall changes.
+This is now set up to only find droplets that have are tagged as the string constance DIGO_TAG, which defaults to 'webserver'. In order to include your droplet in this processing, you must enter your droplet in the web console and hit Tags -> Manage Tags and add a string that is consistent with the DIGO_TAG constant for your droplet to be associated with the firewall changes.
 
 ### The Future
 * This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps this will evolve into a multicloud tool for this at some point.
