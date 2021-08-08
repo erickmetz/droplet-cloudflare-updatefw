@@ -8,6 +8,7 @@ import os
 CF_NETBLOCK_URLS = ['https://cloudflare.com/ips-v4', 'https://cloudflare.com/ips-v6']
 CF_NETBLOCK_FILE = '/tmp/cf_netblocks.txt'
 DIGO_TOKEN = 'DIGITALOCEAN_API_TOKEN_GOES_HERE'
+DIGO_TAG = 'webserver'
 FW_NAME = "cloudflare"
 
 # API nuance: any port value can be a single port, a string range of ports (i.e. '8080-9000'), or 'all'
@@ -62,7 +63,7 @@ def get_droplet_ids(manager):
     """ get IDs of droplets associated with this token """
 
     ids = []
-    droplets = manager.get_all_droplets()
+    droplets = manager.get_all_droplets(tag_name=DIGO_TAG)
     for droplet in droplets:
         ids.append(droplet.id)
 

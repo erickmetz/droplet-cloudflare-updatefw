@@ -2,7 +2,7 @@
 This is a tool to retrieve a list of origin network IP CIDR blocks (netblocks) from Cloudflare and then use DigitalOcean's API to update the firewall for one or more droplets.
 
 ## How It Works
-This script pulls down a list of netblocks from Cloudflare, checks it against the last list that was downloaded (if one exists yet), and if there have been changes it will create or replace a firewall that is associated with any droplets that it can find using the API access key.
+This script pulls down a list of netblocks from Cloudflare, checks it against the last list that was downloaded (if one exists yet), and if there have been changes it will create or replace a firewall that is associated with droplets, tagged as 'webserver', that it can find using the API access key.
 
 The trick here to preserving your other firewall access settings is to have another firewall associated with the droplet(s) that has your more permanent access rules in it.
 
@@ -65,9 +65,8 @@ Add this to the file, staying mindful of what your actual path to the script is 
 * Python 3
 * The python3-pip package
 
-### Caution
-As it's presently written, this will associate *every single droplet* that it can discover through API requests with the firewall that it generates. Utilizing droplet tags and some minor changes in the future will allow more granular targetting of droplets.
+### Note
+This is now set up to only find droplets that have are tagged as the string constance DIGO_TAG, which defaults to 'webservers'. In order to include your droplet in this processing, you must enter your droplet in the web console and hit Tags -> Manage Tags and add a string that is consistent with the DIGO_TAG constant for your droplet to be associated with the firewall changes.
 
 ### The Future
-* The ability to get droplets only with a specific tag
 * This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps this will evolve into a multicloud tool for this at some point.
