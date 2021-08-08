@@ -8,7 +8,7 @@ The trick here to preserving your other firewall access settings is to have anot
 
 When this script is functioning properly for you, remove your HTTP/HTTPS access rules from your permanent firewall and let this script update access so that only Cloudflare's IPs can reach your webserver.
 
-# Installing
+## Installing
 This could run in any user account. In this case we'll say there's a generic "user" account. In this example we'll use /home/user/scripts/.
 
 First, clone the repository:
@@ -47,7 +47,7 @@ Take it for a spin:
 
 You should notice a new firewall set up on DigitalOcean called "cloudflare" that is associated with your droplets
 
-# Automating
+## Automating
 You could make a cronjob to run this at a regular interval.
 
 To do this you would run:
@@ -62,7 +62,10 @@ Add this to the file, staying mindful of what your actual path to the script is 
 
 ```
 
-# Requirements
+### Requirements
 * DigitalOcean API token - [Here's how to Create a Token](https://docs.digitalocean.com/reference/api/create-personal-access-token/)
 * Python 3
 * The python3-pip package
+
+### The Future
+This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps there will a multicloud tool for this at some point.
