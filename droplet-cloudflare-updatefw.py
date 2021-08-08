@@ -10,7 +10,7 @@ CF_NETBLOCK_FILE = '/tmp/cf_netblocks.txt'
 DIGO_TOKEN = '___your digitalocean token goes here___'
 FW_NAME = "cloudflare"
 
-# API nuance: any port value can be a single port, a range of ports (i.e. 8080-9000), or 'all'
+# API nuance: any port value can be a single port, a string range of ports (i.e. '8080-9000'), or 'all'
 FW_SERVICES = [
     [[80, 443], 'tcp']
 ]
