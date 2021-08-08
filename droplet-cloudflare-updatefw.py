@@ -35,11 +35,15 @@ def get_netblocks():
 
 
 def save_netblocks(netblocks):
+    """ save netblocks to file """
+    
     with open(CF_NETBLOCK_FILE, "w") as file:
         file.write('\n'.join(str(netblock) for netblock in netblocks))
 
 
 def netblocks_have_changed(netblocks):
+    """ check if saved netblocks differ from most recent pull """
+    
     if not os.path.exists(CF_NETBLOCK_FILE):
         return True
 
