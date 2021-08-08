@@ -7,7 +7,7 @@ import os
 
 CF_NETBLOCK_URLS = ['https://cloudflare.com/ips-v4', 'https://cloudflare.com/ips-v6']
 CF_NETBLOCK_FILE = '/tmp/cf_netblocks.txt'
-DIGO_TOKEN = '___your digitalocean token goes here___'
+DIGO_TOKEN = 'DIGITALOCEAN_API_TOKEN_GOES_HERE'
 FW_NAME = "cloudflare"
 
 # API nuance: any port value can be a single port, a string range of ports (i.e. '8080-9000'), or 'all'
