@@ -32,9 +32,9 @@ Edit the code with your favorite editor similar to this:
 vim ~/scripts/droplet-cloudflare-updatefw.py
 ```
 
-And replace this constant's string value with your DigitalOcean API token
+And replace this constant's string value with your DigitalOcean API token, replacing *DIGITALOCEAN_API_TOKEN_GOES_HERE*:
 ```
-DIGO_TOKEN = '___your digitalocean token goes here___'
+DIGO_TOKEN = 'DIGITALOCEAN_API_TOKEN_GOES_HERE'
 
 ```
 
