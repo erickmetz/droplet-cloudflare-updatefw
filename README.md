@@ -66,7 +66,7 @@ Add this to the file, staying mindful of what your actual path to the script is 
 * The python3-pip package
 
 ### Caution
-As it's presently written, this will apply associate every single droplet it can find with the firewall that it generated. Utilizing droplet tags and some minor changes in the future will allow more granular targetting of droplets.
+As it's presently written, this will associate *every single droplet* that it can discover through API requests with the firewall that it generates. Utilizing droplet tags and some minor changes in the future will allow more granular targetting of droplets.
 
 ### The Future
 * The ability to get droplets only with a specific tag
