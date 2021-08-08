@@ -2,11 +2,11 @@
 This is a tool to retrieve a list of origin network IP CIDR blocks (netblocks) from Cloudflare and then use DigitalOcean's API to update the firewall for one or more droplets.
 
 ## How It Works
-This python script pulls down a list of netblocks from Cloudflare, checks it against the last list that was downloaded (if one exists yet), and if there have been changes it will create or replace a firewall that is associated with any droplets that it can find using the API access key.
+This script pulls down a list of netblocks from Cloudflare, checks it against the last list that was downloaded (if one exists yet), and if there have been changes it will create or replace a firewall that is associated with any droplets that it can find using the API access key.
 
 The trick here to preserving your other firewall access settings is to have another firewall associated with the droplet(s) that has your more permanent access rules in it.
 
-When this script is functioning properly for you, remove your HTTP/HTTPS access rules from your permanent firewall and let this script update access so that only Cloudflare's IPs can reach your webserver.
+When this script is functioning properly for you, remove your HTTP/HTTPS access rules from your permanent firewall and let this script update access so that only Cloudflare's IPs can reach your webserver directly.
 
 ## Installing
 This could run in any user account. In this case we'll say there's a generic "user" account. In this example we'll use /home/user/scripts/.
