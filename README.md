@@ -1,5 +1,5 @@
 # droplet-cloudflare-updatefw
-Tool to retrieve a list of origin network IP CIDR blocks (netblocks) from Cloudflare and then use DigitalOcean's API to update the firewall for one or more droplets.
+This is a tool to retrieve a list of origin network IP CIDR blocks (netblocks) from Cloudflare and then use DigitalOcean's API to update the firewall for one or more droplets.
 
 ## How It Works
 This python script pulls down a list of netblocks from Cloudflare, checks it against the last list that was downloaded (if one exists yet), and if there have been changes it will create or replace a firewall that is associated with any droplets that it can find using the API access key.
@@ -68,4 +68,4 @@ Add this to the file, staying mindful of what your actual path to the script is 
 * The python3-pip package
 
 ### The Future
-This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps there will a multicloud tool for this at some point.
+This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps this will evolve into a multicloud tool for this at some point.
