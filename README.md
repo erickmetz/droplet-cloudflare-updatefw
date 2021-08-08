@@ -65,6 +65,9 @@ Add this to the file, staying mindful of what your actual path to the script is 
 * Python 3
 * The python3-pip package
 
+### Caution
+As it's presently written, this will apply associate every single droplet it can find with the firewall that it generated. Utilizing droplet tags and some minor changes in the future will allow more granular targetting of droplets.
+
 ### The Future
 * The ability to get droplets only with a specific tag
 * This same functionality could be reproduced for AWS, GCP, Azure, and other APIs. Perhaps this will evolve into a multicloud tool for this at some point.
