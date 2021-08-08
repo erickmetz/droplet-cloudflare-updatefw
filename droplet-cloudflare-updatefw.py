@@ -113,7 +113,6 @@ droplet_ids = get_droplet_ids(digo_manager)
 
 # Create firewall rules for Digital Ocean
 firewall_rules = create_inbound_rules(cf_netblocks)
-print(firewall_rules)
 
 # Get current firewall, if applicable
 digo_firewall = get_firewall(digo_manager)
