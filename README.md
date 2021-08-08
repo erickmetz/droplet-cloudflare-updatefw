@@ -43,7 +43,7 @@ Take it for a spin:
 ~/scripts/droplet-cloudflare-updatefw.py
 ```
 
-You should notice a new firewall set up on the DigitalOcean web management console under the Networking -> Firewalls ipage, called "cloudflare", that is associated with your droplet(s)
+You should notice a new firewall set up on the DigitalOcean web management console under the Networking -> Firewalls page, called "cloudflare", that is associated with your droplet(s)
 
 ## Automating
 You could make a cronjob to run this at a regular interval.
