@@ -9,9 +9,7 @@ The trick here to preserving your other firewall access settings is to have anot
 When this script is functioning properly for you, remove your HTTP/HTTPS access rules from your permanent firewall and let this script update access so that only Cloudflare's IPs can reach your webserver directly.
 
 ## Installing
-This could run in any user account. In this case we'll say there's a generic "user" account. In this example we'll use /home/user/scripts/.
-
-First, clone the repository:
+This could run in any user account. First, clone the repository:
 ```
 git clone https://github.com/erickmetz/droplet-cloudflare-updatefw.git
 ```
