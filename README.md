@@ -54,7 +54,7 @@ crontab -e
 
 ```
 
-Add this to the file, staying mindful of what your actual path to the script is and changing the entry, accordingly. This example checks for netblock changes daily at 1-2am pacific time, or 9am UTC:
+Add this to the file, staying mindful of what your actual path to the script is and changing the entry and the timezone configuration of the server that will be running this script. This example checks for netblock changes daily at 1-2am pacific time, or 9am UTC:
 ```
 0 9 * * * /home/user/scripts/droplet-cloudflare-updatefw.py > /dev/null 2>&1
 
