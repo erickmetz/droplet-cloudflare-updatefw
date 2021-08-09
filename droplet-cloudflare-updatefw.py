@@ -24,6 +24,9 @@ def get_netblocks():
     for ip_url in CF_NETBLOCK_URLS:
         response = requests.get(ip_url)
         response.raise_for_status()
+        if not response.text:
+            print(f"Empty response from {{ip_url}}. Exiting!")
+            exit(1)
         for netblock in response.text.splitlines():
             try:
                 ipaddress.ip_network(netblock)
