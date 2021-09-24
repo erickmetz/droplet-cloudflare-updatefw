@@ -10,25 +10,25 @@ When this script is functioning properly for you, remove your HTTP/HTTPS access 
 
 ## Installing
 This could run in any user account. First, clone the repository:
-```
+```console
 git clone https://github.com/erickmetz/droplet-cloudflare-updatefw.git
 ```
 
 Next install the requirements:
-```
+```console
 cd droplet-cloudflare-updatefw
 pip install -r requirements.txt
 ```
 
 Make the script executable, make a home for the script, and copy it over:
-```
+```console
 chmod +x droplet-cloudflare-updatefw.py
 mkdir ~/scripts
 cp droplet-cloudflare-updatefw.py ~/scripts
 ```
 
 Edit the code with your favorite editor similar to this:
-```
+```console
 vim ~/scripts/droplet-cloudflare-updatefw.py
 ```
 
@@ -39,7 +39,7 @@ DIGO_TOKEN = 'DIGITALOCEAN_API_TOKEN_GOES_HERE'
 ```
 
 Take it for a spin:
-```
+```console
 ~/scripts/droplet-cloudflare-updatefw.py
 ```
 
@@ -49,9 +49,8 @@ You should notice a new firewall set up on the DigitalOcean web management conso
 You could make a cronjob to run this at a regular interval.
 
 To do this you would run:
-```
+```console
 crontab -e
-
 ```
 
 Add this to the file, staying mindful of what your actual path to the script is and changing the entry and the timezone configuration of the server that will be running this script. This example checks for netblock changes daily at 1-2am pacific time, or 9am UTC:
